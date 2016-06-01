@@ -17,7 +17,6 @@ JobScheduler::JobScheduler(int timeSlice){
 	
 }
 
-
 void JobScheduler::process(ifstream &FILE){
 	
 	
