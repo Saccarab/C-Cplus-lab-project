@@ -1,2 +1,2 @@
 # Random-CS-Stuff
-cs220
+c/c++
