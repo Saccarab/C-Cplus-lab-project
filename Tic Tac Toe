@@ -1,0 +1,37 @@
+//c minimax tic tac toe 
+	
+
+int score[9];
+void minimax(short int state, char me,int i) {
+	  
+    int stateTemp=state;	
+	
+    for(i = 0; i < 9 ; i++) {//For all moves, // swap 9 with turn
+        if(getState(stateTemp,i) == 0) {//If legal,
+            stateTemp=addState(state,i,me);//Try the move
+            //if me statetie+1 = score=score+10 if them statie+1->score=score+10
+            
+            if ((checkWin(stateTemp))==(STATE_XWIN)){
+            	if (me==1)
+            	score[i]=score[i]+10;
+            	else
+            	score[i]=score[i]-10;
+           		}
+            else if ((checkWin(stateTemp))==(STATE_OWIN)){
+            	if (me==2)
+            	score[i]=score[i]+10;
+            	else
+            	score[i]=score[i]-10;
+            	}
+            else if	((checkWin(stateTemp))==STATE_TIE){
+            	
+			}
+			else{	
+            	if (me==1)
+            		minimax(stateTemp,2,i);
+           		else
+					minimax(stateTemp,1,i);
+            }	
+        }  
+    }          
+}
