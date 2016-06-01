@@ -1,3 +1,4 @@
+//I foresee everything rock/paper scissors
 rps whatToPlay(int round,rps *myhist,rps *opphist,int length){
 	
 	int counter=0;
