@@ -6,15 +6,12 @@ rps whatToPlay(int round,rps *myhist,rps *opphist,int length){
 	int i;
 	
 	for (k=round-1-length;k>=length-1;k--){
-	
 		for (i=0;i<length;i++){
 			if(myhist[round-1-i]==myhist[k-i])
 				counter++;
 		}
 		if (counter==length){
-			
 			if (eval_round(myhist[k+1],opphist[k+1],NULL,NULL)==Player1){
-					
 				if (opphist[k+1]==Scissors)
 					return Rock;		
 				
@@ -23,9 +20,7 @@ rps whatToPlay(int round,rps *myhist,rps *opphist,int length){
 				
 				else 
 					return Paper;
-			
 			}
-			
 			else if(eval_round(myhist[k+1],opphist[k+1],NULL,NULL)==Player2){
 				
 				if (opphist[k+1]==Scissors)
@@ -90,9 +85,3 @@ rps player_akaya2(int round,rps *myhist,rps *opphist) {
 }
 
 register_player(player_akaya2,"akaya2");
-
-
-
-
-
-
